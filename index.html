@@ -1,0 +1,44 @@
+<!-- Basic HTML document -->
+<!DOCTYPE html>
+<html>
+<!-- Head of HTML document -->
+<head>
+    <!-- Setting the character set to utf-8 -->
+    <meta charset="utf-8">
+    <!-- Setting the viewport to be the width of the device that is being used -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Setting the title of the webpage to 'Whiteboard' -->
+    <title>Whiteboard</title>
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Pulling the P5 library for canvas functions like drawing, erasing, etc. -->
+<script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+<!-- Pulling the P5 library for button functions like clearAll etc. -->
+<script src="libraries/p5.dom.js"></script>
+<!-- Pulling the Mesibo library/API so that we can send messages between users -->
+<script type="text/javascript" src="https://api.mesibo.com/mesibo.js" crossorigin="anonymous"></script>
+<!-- Pulling our javascript code -->
+<script src="script.js"></script>
+<!-- Body of the HTML document -->
+<body>
+    <div class = "navigation">
+    <!-- Header for the page labeled 'Whiteboard'-->
+    <h1>Whiteboard</h1>
+    <div class = 'buttonPos'>
+    <!-- When the draw button is clicked, set erasing to false so that the user can draw -->
+    <button class = "button1" onclick="erasing = false">
+        Draw
+    </button>
+    <!-- When the erase button is clicked, set erasing to true so that the user can erase -->
+    <button class = "button2" onclick="erasing = true">
+        Erase
+    </button>
+    <!-- When the erase all button is clicked, clear the entire screen -->
+    <button class = "button3" onclick= "clearAll()">
+        Clear All 
+    </button>
+    </div>
+    </div>
+</body>
+</html>
